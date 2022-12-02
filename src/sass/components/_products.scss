@@ -1,0 +1,349 @@
+.Products {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 24px;
+     &:nth-child(1) {
+        background-color:#AEC6A5;;
+     }
+     &:nth-child(1) .Products__box {
+       
+        background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+        box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);   
+      }
+     &:nth-child(2) {
+        background-color: #EFD478;
+    }
+    &:nth-child(2) .Products__box {
+        background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+        box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+      }
+    &:nth-child(3) {
+        background-color: $red-text-color;
+    }
+    &:nth-child(3) .Products__box {
+        background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+      }
+}  
+
+&__box::before {
+    content: "";
+width: 100%;
+height: 100%;
+    border-radius: 50%;
+  }
+&__box {
+    display:flex;
+    border-radius: 50%;
+}
+    &__subject {
+      text-transform: uppercase;
+        font-family: 'Seymour One';
+        color: $dark-title-color;
+    }
+&__span {
+  text-transform: uppercase;
+    font-family: 'Montserrat';
+    color: $dark-title-color;
+}
+&__titel {
+  text-transform: uppercase;
+    font-family: 'Montserrat';
+    color: $dark-title-color;
+}
+&__text {
+text-align: center;
+font-family: 'Montserrat';
+    color: $dark-title-color;
+}
+
+&__button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+&__svg {
+    border: #131313;
+ width: 40px;
+}
+}
+
+
+
+@media  screen and (min-width: 1200px) {
+    .Products {
+        text-align: center;
+        justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 66px;
+ 
+    background-image: url(/src/images/ico_cream_1200px_x1.jpg)  ;
+    background-size: cover;
+  
+    &__list{
+        width: 368px;
+        // height: 535px;
+        margin-right: 32px;
+        &:last-child {
+            margin-right: 0;}
+            &:nth-child(1) .Products__box::before {
+                background-size: cover;
+                background-image: url(/src/images/kelsey-curtis_1200px_1x.jpg);
+              }
+              &:nth-child(2) .Products__box::before {
+                background-size: cover;
+                background-image: url(/src/images/pariwat-pannium_1200px_1x.jpg);
+              }
+              &:nth-child(3) .Products__box::before {
+                background-size: cover;
+                background-image: url(/src/images/victor-rutka_1200px_1x.jpg);
+              }
+              &:nth-child(1) .Products__button {
+                margin-top: 112px;
+              }
+              &:nth-child(2) .Products__button{
+                margin-top: 87px;
+              }
+              &:nth-child(3) .Products__button {
+                margin-top: 87px;
+              }
+    }
+    &__box::before {
+        transform: translateY(-16px);
+      }
+  
+      &__box {
+        display:flex;
+        margin-top: -45%;
+        margin-bottom: 30px;
+              border-radius: 50%;
+           width: 300px;
+    height: 300px;
+      background-color: #f7d771;
+       
+        flex-wrap: wrap;
+        
+        justify-content: center;
+        flex-direction: column;
+       
+      }
+
+    &__span {
+       
+        @include font(30px, 800, 1.23, 0.04em);
+text-align: center;
+
+    }
+    &__subject {
+       
+        @include font(36px, 400, 1.25, 0.06em);
+        color: $black-text-color;
+margin-top: 12px;
+margin-bottom: 303px;
+    }
+    &__wrapper {
+
+    }
+    &__menu {
+        padding: 0px;
+        display: flex;
+    }
+&__titel {
+    margin-bottom: 65px;
+    @include font(30px, 700, 1.23, 0.04em);
+   
+}
+&__text {
+text-align: center;
+    @include font(16px, 400, 1.7, 0.04em);
+  
+}
+
+&__button {
+    padding-bottom: 45px;
+}
+}
+}
+
+
+ @media screen and (min-width: 768px) and (max-width: 1199px){
+    br {
+        display: none;
+      }
+    .Products {
+        text-align: center;
+        justify-content: center;
+    padding-top: 61px;
+    padding-bottom: 82px;
+    background-image: url(/src/images/ico_cream_1200px_x1.jpg);
+    background-size: cover;
+  
+    &__list{
+        width: 224px;
+        // min-height: 428px;
+        margin-right: 16px;
+        &:last-child {
+            margin-right: 0;
+         }
+         &:nth-child(1) .Products__box::before {
+            background-size: cover;
+            background-image: url(/src/images/kelsey-curtis_768px_2x.jpg);
+          }
+          &:nth-child(2) .Products__box::before {
+            background-size: cover;
+            background-image: url(/src/images/pariwat-pannium_768px_2x.jpg);
+          }
+          &:nth-child(3) .Products__box::before {
+            background-size: cover;
+            background-image: url(/src/images/victor-rutka_768px_2x.jpg);
+          }
+          &:nth-child(1) .Products__button {
+            margin-top: 111px;
+          }
+          &:nth-child(2) .Products__button{
+            margin-top: 63px;
+          }
+          &:nth-child(3) .Products__button {
+            margin-top:auto;
+          }
+    }
+    &__box::before {
+        transform: translateY(-11px);
+      }
+    &__box {
+        margin-top: -50%;
+        margin-bottom: 20px;
+        width: 199px;
+        height: 199px;
+    }
+    &__menu {
+        display: flex;
+    }
+    &__span {
+        @include font(22px, 800, 1.22, 0.04em);
+    }
+    &__wrapper {
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    &__subject {
+        @include font(34px, 400, 1.26, 0.04em);
+margin-top: 12px;
+margin-bottom: 200px;
+    }
+    &__titel {
+        @include font(22px, 700, 1.22, 0.04em);
+        margin-bottom: 40px;
+    }
+    &__text {
+        @include font(14px, 400, 1.7, 0.04em);
+       
+    }
+    &__button {
+        padding-bottom: 5px;
+    }
+}  
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px),
+screen and (max-width: 480px) and (max-width: 767px) {
+    br {
+        display: none;
+      }
+    
+
+      
+    .Products {
+        background: url(/src/images/Figma_28_480px.png);
+        background-position: center;
+           background-size: auto;
+        background-repeat: no-repeat;
+        background-color: #ffff;
+        text-align: center;
+        justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  
+   
+    &__list{
+      min-height: 420px;
+        align-items: center;
+        margin-bottom: 148px;
+        &:last-child {
+            margin-bottom: 0;
+         }
+         &:nth-child(1) .Products__box::before {
+            background-size: cover;
+            background-image: url(/src/images/kelsey-curtis_768px_2x.jpg);
+          }
+          &:nth-child(2) .Products__box::before {
+            background-size: cover;
+            background-image: url(/src/images/pariwat-pannium_768px_2x.jpg);
+          }
+          &:nth-child(3) .Products__box::before {
+            background-size: cover;
+            background-image: url(/src/images/victor-rutka_768px_2x.jpg);
+          }
+          &:nth-child(1) .Products__box {
+            margin-bottom: 20px;
+          }
+          &:nth-child(2) .Products__box {
+            margin-bottom: 20px;
+          }
+          &:nth-child(3) .Products__box {
+            margin-bottom: 2px;
+          }
+          &:nth-child(1) .Products__button {
+            margin-top: 106px;
+          }
+          &:nth-child(2) .Products__button{
+            margin-top: 58px;
+          }
+          &:nth-child(3) .Products__button {
+            margin-top: 76px;
+          }
+    }
+    &__box::before {
+        transform: translateY(-10px);
+      }
+    &__box {
+        margin-top: -35%;
+        width: 199px;
+        height:199px;
+    }
+  
+    &__span {
+        @include font(18px, 800, 2.0, 0.01em);
+    }
+
+    &__subject {
+        @include font(30px, 400, 1.26, 0.04em);
+margin-top: 12px;
+margin-bottom: 148px;
+    }
+
+&__wrapper {
+    
+    padding-left: 40px;
+    padding-right: 40px;
+}
+&__titel {
+    @include font(20px, 700, 2.0, 0.04em);
+    margin-bottom: 34px;
+}
+&__text {
+    @include font(14px, 400, 1.7, 0.04em);
+}
+&__button {
+    padding-bottom: 5px;
+}
+    } 
+
+}

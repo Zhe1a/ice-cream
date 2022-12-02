@@ -1,0 +1,158 @@
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 12px;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 20px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        align-items: center;
+        padding-top: 0; 
+    }
+} 
+
+.logo {
+    z-index: 110;
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 84px;
+
+    background-color: $bg-green;
+
+    transform: translateX(100%);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    z-index: 100;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 120px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        position: static;
+        height: auto;
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+        transform: translateX(0);
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__list {
+        width: 100%;
+        
+        @media screen and (min-width: $desctop) {
+           display: flex;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media screen and (min-width: $desctop) {
+            margin-right: 27px;
+        }
+    }
+
+    &__link {
+        padding: 16px 0;
+        display: block;
+        
+        @include font(32px, 700, 1.21, normal);
+
+        @media screen and (min-width: $tablet) {
+            padding: 20px 0;
+        }
+
+        @media screen and (min-width: $desctop) {
+            @include font(16px, 700, 1.18, normal);
+            padding-top: 40px;
+            padding-bottom: 22px;
+        }
+    }
+
+    &__button {
+        background-color: inherit;
+        border: none;
+        padding: 0;
+        z-index: 110;
+        margin-left: auto;
+    
+        @media screen and (min-width: $desctop) {
+            display: none;
+        }
+    
+        &.is-open {
+            position: fixed;
+            top: 15;
+            right: 15;
+
+            & .icon-mobile-close {
+                display: block;
+            }
+
+            & .icon-mobile-open {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        color: $light-title-color;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $black-text-color;
+    }
+}
+
+.icon-mobile-close {
+    display: none;
+}
+
+.icon-mobile-open,
+.icon-mobile-close {
+    fill: $white-text-color;
+}
+
+.button-buy {
+    &:hover,
+    &:focus {
+        border-color: $btn-actions;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 31px;
+    height: 42px;
+    @include font(14px, 600, 1.21, normal);
+
+    @media screen and (max-width: 767.50px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin: 0;
+    }
+}
+
+.icon-button-buy {
+    margin-left: 15px;
+}
+

@@ -1,0 +1,45 @@
+<header class="header" id="home">
+    <div class="container header__container">
+        <a href="./index.html" class="logo"> 
+            <picture>
+                <source srcset="./images/header/logo-60.png 1x, ./images/header/logo-120.png 2x" media="(min-width:1200px)" />
+                <source srcset="./images/header/logo-48.png 1x, ./images/header/logo-96.png 2x" media="(min-width:768px)" />
+                <source srcset="./images/header/logo-40.png 1x, ./images/header/logo-80.png 2x" media="(min-width:320px)" />
+                <img src="./images/header/logo-40.png" alt="логотип морозиво" class="logo__image" />
+            </picture>
+        </a>
+        
+        <nav class="menu" data-menu>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#home" class="menu__link">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#about" class="menu__link">About us</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#how" class="menu__link">How it’s made?</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#products" class="menu__link">Our products</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#contact" class="menu__link">Contact</a>
+                </li>
+            </ul>
+        </nav> 
+    
+        <button class="menu__button" type="button" aria-label="menu" data-menu-button>
+            <svg width="32" height="32">
+                <use class="icon-mobile-open" href="./images/svg/icons.svg#icon-mobile-open"></use>
+                <use class="icon-mobile-close" href="./images/svg/icons.svg#icon-mobile-close"></use>
+            </svg>
+        </button>
+        
+        <button class="btn button-buy" type="button" data-modal-open>Buy now
+            <svg class="icon-button-buy" width="8" height="12">
+                <use href="./images/svg/icons.svg#btn-sign"></use>
+            </svg>
+        </button>
+    </div>
+</header>

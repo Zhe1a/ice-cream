@@ -1,0 +1,132 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: $bg-green;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+blockquote,
+cite,
+p {
+  margin: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding-inline-start: 0;
+} 
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+      // <button class="btn">
+      //   Назва кнопки
+      //   <svg width="10" height="10">
+      //     <use href="./images/svg/icons.svg#btn-sign"></use>
+      //   </svg>
+      // </button>
+
+.btn {
+  display: inline-flex;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 10px;
+
+  @include font(14px, 600, 1.28, normal);
+
+  cursor: pointer;
+  text-align: center;
+  color: $black-text-color;
+  background-color: $accent-color;
+
+  &:hover, &:focus, &:active {
+    background-color: $btn-actions;
+  }
+  &:disabled {
+    background-color: $btn-disabled;
+  }
+  & svg {
+    display: inline-flex;
+    align-self: center;
+    margin-left: 10px;
+    stroke: $black-text-color;
+  }
+  &--transparent {
+    padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 34px;
+  padding-right: 34px;
+  border-width: 2px;
+  border-color: $accent-color;
+  border-style: solid;
+  background-color: transparent;
+  color: $light-title-color;
+  
+  &:hover, &:focus, &:active {
+    border-color: $btn-actions;
+    background-color: transparent;
+  }
+  &:disabled {
+    border-color: $btn-disabled;
+    background-color: transparent;
+  }
+  & svg {
+    stroke: $light-title-color;
+  }
+
+  }
+  
+}
